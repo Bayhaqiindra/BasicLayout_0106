@@ -1,3 +1,3 @@
 **HASIL RUN**
 
-![Screenshot_1741808138](https://github.com/user-attachments/assets/b6a61bc5-2962-40ab-8e5c-9ea0f3cbadf5)
+![Screenshot_1741818201](https://github.com/user-attachments/assets/274a8f3c-8b10-48bf-a472-78be2b7a5c34)
