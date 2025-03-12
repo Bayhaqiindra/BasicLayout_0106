@@ -27,9 +27,11 @@ class CuacaHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> times = ['Now', '17.00', '20.00', '23.00'];
+    
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Color.fromARGB(255, 74, 180, 230),
+        backgroundColor: Color.fromARGB(255, 74, 180, 230),
         elevation: 0,
         title: const Text(
           'Weather App',
@@ -63,7 +65,7 @@ class CuacaHomePage extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               'Yogyakarta',
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.w500, color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(fontSize: 36, fontWeight: FontWeight.w500, color: Colors.white),
             ),
             const SizedBox(height: 10),
             const Text(
@@ -73,7 +75,7 @@ class CuacaHomePage extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               '28°C',
-              style: TextStyle(fontSize: 90, fontWeight: FontWeight.w200, color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(fontSize: 90, fontWeight: FontWeight.w200, color: Colors.white),
             ),
             const Divider(height: 30, thickness: 3, color: Color.fromARGB(112, 255, 255, 255), indent: 40, endIndent: 40),
             const SizedBox(height: 5),
@@ -87,10 +89,10 @@ class CuacaHomePage extends StatelessWidget {
               children: [
                 Icon(FontAwesomeIcons.cloudSun, color: Color.fromARGB(209, 243, 158, 10), size: 20),
                 SizedBox(width: 10),
-                Text('5 km/h', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 255, 255, 255))),
+                Text('5 km/h', style: TextStyle(fontSize: 20, color: Colors.white)),
               ],
             ),
-             const SizedBox(height: 15),
+            const SizedBox(height: 15),
             Container(
               decoration: BoxDecoration(
                 color: const Color.fromARGB(183, 245, 245, 245).withOpacity(0.5),
@@ -110,9 +112,9 @@ class CuacaHomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: List.generate(4, (index) {
                       return Column(
-                        children: const [
+                        children: [
                           SizedBox(height: 5),
-                          Text('Now', style: TextStyle(fontSize: 14, color: Colors.black)),
+                          Text(times[index], style: TextStyle(fontSize: 14, color: Colors.black)),
                           SizedBox(height: 5),
                           Icon(FontAwesomeIcons.cloudSun, color: Color.fromARGB(209, 243, 158, 10), size: 20),
                           SizedBox(height: 5),
@@ -122,7 +124,7 @@ class CuacaHomePage extends StatelessWidget {
                           SizedBox(height: 5),
                           Text('10 km/h', style: TextStyle(fontSize: 14, color: Colors.red)),
                           SizedBox(height: 20),
-                          Icon(FontAwesomeIcons.cloudRain,color: Color.fromARGB(255, 15, 153, 221), size: 20),
+                          Icon(FontAwesomeIcons.cloudRain, color: Color.fromARGB(255, 15, 153, 221), size: 20),
                           SizedBox(height: 5),
                           Text('0%', style: TextStyle(fontSize: 14, color: Color.fromARGB(213, 79, 79, 79))),
                         ],
